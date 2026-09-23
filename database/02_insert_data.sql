@@ -1,0 +1,99 @@
+-- ============================================================
+-- VEL Aerospace
+-- SAMPLE DATA / DML
+-- ============================================================
+
+INSERT INTO EMPLOYEES VALUES
+(1,'Aarav Mehta','Sales Manager','aarav@vel.aero','9000000001','ACTIVE');
+
+INSERT INTO EMPLOYEES VALUES
+(2,'Diya Shah','Maintenance Engineer','diya@vel.aero','9000000002','ACTIVE');
+
+INSERT INTO EMPLOYEES VALUES
+(3,'Kabir Rao','Purchase Officer','kabir@vel.aero','9000000003','ACTIVE');
+
+INSERT INTO EMPLOYEES VALUES
+(4,'Meera Iyer','Front Desk','meera@vel.aero','9000000004','ACTIVE');
+
+INSERT INTO CUSTOMERS VALUES
+(101,'SkyBridge Aviation','contact@skybridge.com','9100000101','Mumbai','COMPANY');
+
+INSERT INTO CUSTOMERS VALUES
+(102,'Orion Air Services','hello@orionair.com','9100000102','Delhi','COMPANY');
+
+INSERT INTO CUSTOMERS VALUES
+(103,'National Research Wing','nrw@example.com','9100000103','Bengaluru','GOVERNMENT');
+
+INSERT INTO CUSTOMERS VALUES
+(104,'Arjun Kapoor','arjun@example.com','9100000104','Pune','INDIVIDUAL');
+
+INSERT INTO SUPPLIERS VALUES
+(201,'AeroParts Global','Daniel Thomas','sales@aeroparts.com','9200000201','Singapore');
+
+INSERT INTO SUPPLIERS VALUES
+(202,'Horizon Aircraft Works','Maya Chen','contact@horizonair.com','9200000202','Seattle');
+
+INSERT INTO SUPPLIERS VALUES
+(203,'Bharat Aero Systems','Vikram Singh','sales@bharataero.in','9200000203','Bengaluru');
+
+INSERT INTO AIRCRAFT VALUES
+(301,'VEL-A01','Falcon X1','Horizon Aircraft Works','BUSINESS JET',
+2022,18000000,22500000,'AVAILABLE',202);
+
+INSERT INTO AIRCRAFT VALUES
+(302,'VEL-A02','SkyLiner 200','Bharat Aero Systems','TURBOPROP',
+2021,8500000,11200000,'AVAILABLE',203);
+
+INSERT INTO AIRCRAFT VALUES
+(303,'VEL-A03','AeroStar 9','Horizon Aircraft Works','BUSINESS JET',
+2023,22000000,27500000,'RESERVED',202);
+
+INSERT INTO AIRCRAFT VALUES
+(304,'VEL-A04','Falcon X2','Bharat Aero Systems','BUSINESS JET',
+2020,15500000,19000000,'MAINTENANCE',203);
+
+INSERT INTO AIRCRAFT VALUES
+(305,'VEL-A05','CargoLift C1','AeroParts Global','CARGO',
+2019,12000000,15500000,'AVAILABLE',201);
+
+INSERT INTO PURCHASES VALUES
+(401,301,202,DATE '2025-01-15',18000000,'PAID');
+
+INSERT INTO PURCHASES VALUES
+(402,302,203,DATE '2025-02-18',8500000,'PAID');
+
+INSERT INTO PURCHASES VALUES
+(403,303,202,DATE '2025-04-22',22000000,'PARTIAL');
+
+INSERT INTO PURCHASES VALUES
+(404,304,203,DATE '2025-05-10',15500000,'PAID');
+
+INSERT INTO PURCHASES VALUES
+(405,305,201,DATE '2025-06-05',12000000,'PAID');
+
+INSERT INTO SALES VALUES
+(501,307,101,1,DATE '2025-09-15',20500000,'PAID');
+
+INSERT INTO SALES VALUES
+(502,303,102,1,DATE '2025-09-20',27500000,'PARTIAL');
+
+INSERT INTO MAINTENANCE VALUES
+(601,304,2,DATE '2025-09-18',
+'Engine Inspection','Routine engine inspection',85000,'IN PROGRESS');
+
+INSERT INTO MAINTENANCE VALUES
+(602,301,2,DATE '2025-08-12',
+'Interior Service','Cabin inspection and seat service',45000,'COMPLETED');
+
+INSERT INTO CHECK_LOG VALUES
+(701,101,4,TIMESTAMP '2025-09-23 09:30:00',
+TIMESTAMP '2025-09-23 10:15:00',
+'Aircraft purchase discussion','OUT');
+
+INSERT INTO CHECK_LOG VALUES
+(702,102,4,TIMESTAMP '2025-09-23 11:00:00',
+NULL,'Aircraft inspection visit','IN');
+
+COMMIT;
+
+PROMPT Sample records inserted.
